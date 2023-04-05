@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+   char operador;
+   double num1, num2, resultado;
+
+   printf("Digite um operador (+, -, *, /): ");
+   scanf("%c", &operador);
+
+   printf("Digite dois numeros: ");
+   scanf("%lf %lf", &num1, &num2);
+
+   switch(operador) {
+      case '+':
+         resultado = num1 + num2;
+         printf("%.2lf + %.2lf = %.2lf", num1, num2, resultado);
+         break;
+
+      case '-':
+         resultado = num1 - num2;
+         printf("%.2lf - %.2lf = %.2lf", num1, num2, resultado);
+         break;
+
+      case '*':
+         resultado = num1 * num2;
+         printf("%.2lf * %.2lf = %.2lf", num1, num2, resultado);
+         break;
+
+      case '/':
+         resultado = num1 / num2;
+         printf("%.2lf / %.2lf = %.2lf", num1, num2, resultado);
+         break;
+
+      default:
+         printf("Operador invalido.");
+   }
+
+   return 0;
+}
